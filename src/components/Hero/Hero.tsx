@@ -30,7 +30,7 @@ function Hero() {
                     <div className="mt-10 flex flex-col gap-3 sm:flex-row">
 
                         <Link
-                            to="/products"
+                            to="/productos"
                             className="inline-flex items-center justify-center rounded-full bg-neutral-950 px-7 py-3.5 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-neutral-800"
                         >
                             Ver colección

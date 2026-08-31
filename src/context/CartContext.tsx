@@ -21,6 +21,7 @@ export interface CartItem {
     quantity: number;
 }
 
+
 // TIPO DEL CONTEXTO
 interface CartContextType {
     cart: CartItem[];
@@ -35,6 +36,11 @@ interface CartContextType {
 
     decreaseQuantity: (id: number) => void;
 
+    updateQuantity: (
+        id: number,
+        quantity: number
+    ) => void;
+
     total: number;
 
     cartCount: number;
@@ -42,9 +48,9 @@ interface CartContextType {
 
 
 // CONTEXTO
-const CartContext = createContext<CartContextType | undefined>(
-    undefined
-);
+const CartContext = createContext<
+    CartContextType | undefined
+>(undefined);
 
 
 // PROVIDER
@@ -67,7 +73,7 @@ export function CartProvider({
             );
 
 
-            // Si ya existe, aumenta la cantidad
+            // SI YA EXISTE, AUMENTA LA CANTIDAD
             if (existingProduct) {
 
                 return prevCart.map((item) =>
@@ -84,12 +90,12 @@ export function CartProvider({
             }
 
 
-            // Si no existe, lo agrega
+            // SI NO EXISTE, LO AGREGA
             return [
                 ...prevCart,
 
                 {
-                    product: product,
+                    product,
                     quantity: 1,
                 },
             ];
@@ -104,6 +110,35 @@ export function CartProvider({
             prevCart.filter(
                 (item) => item.product.id !== id
             )
+        );
+    };
+
+
+    // ACTUALIZAR CANTIDAD
+    const updateQuantity = (
+        id: number,
+        quantity: number
+    ) => {
+
+        setCart((prevCart) =>
+
+            prevCart
+                .map((item) =>
+
+                    item.product.id === id
+
+                        ? {
+                            ...item,
+                            quantity,
+                        }
+
+                        : item
+                )
+
+                // SI LA CANTIDAD ES 0, ELIMINA EL PRODUCTO
+                .filter(
+                    (item) => item.quantity > 0
+                )
         );
     };
 
@@ -127,6 +162,7 @@ export function CartProvider({
         );
     };
 
+
     // DISMINUIR CANTIDAD
     const decreaseQuantity = (id: number) => {
 
@@ -146,8 +182,10 @@ export function CartProvider({
                         : item
                 )
 
-                // Si llega a 0, se elimina
-                .filter((item) => item.quantity > 0)
+                // SI LLEGA A 0, SE ELIMINA
+                .filter(
+                    (item) => item.quantity > 0
+                )
         );
     };
 
@@ -175,6 +213,7 @@ export function CartProvider({
     const cartCount = cart.reduce(
 
         (acc, item) =>
+
             acc + item.quantity,
 
         0
@@ -186,6 +225,7 @@ export function CartProvider({
 
         <CartContext.Provider
             value={{
+
                 cart,
 
                 addToCart,
@@ -197,6 +237,8 @@ export function CartProvider({
                 increaseQuantity,
 
                 decreaseQuantity,
+
+                updateQuantity,
 
                 total,
 
@@ -216,14 +258,12 @@ export function useCart() {
 
     const context = useContext(CartContext);
 
-
     if (!context) {
 
         throw new Error(
             "useCart debe utilizarse dentro de un CartProvider"
         );
     }
-
 
     return context;
 }
