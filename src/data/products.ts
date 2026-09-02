@@ -7,7 +7,8 @@ export const products = [
         image: "/Imagen1.jpeg",
         category: "Fundas",
         variant: ["Iphone 16 pro"],
-        color: "Transperente"
+        color: "Transperente",
+        stock: 0,
     },
     {
         id: 2,
@@ -17,7 +18,8 @@ export const products = [
         image: "/Imagen2.jpeg",
         category: "Fundas",
         variant: ["Iphone 11"],
-        color: "Transparente"
+        color: "Transparente",
+        stock: 10,
     },
     {
         id: 3,
@@ -27,7 +29,8 @@ export const products = [
         image: "/Imagen3.jpeg",
         category: "Fundas",
         variant: ["Iphone 13 pro MAX"],
-        color: "Negro"
+        color: "Negro",
+        stock: 8,
     },
     {
         id: 4,
@@ -37,7 +40,8 @@ export const products = [
         image: "/Imagen4.jpeg",
         category: "Fundas",
         variant: ["Iphone 13 pro"],
-        color: "Negro"
+        color: "Negro",
+        stock: 0,
     },
     {
         id: 5,
@@ -47,7 +51,8 @@ export const products = [
         image: "/Imagen5.jpeg",
         category: "Cables",
         variant: [],
-        color: "Blanco"
+        color: "Blanco",
+        stock: 15,
     },
     {
         id: 6,
@@ -57,7 +62,8 @@ export const products = [
         image: "/Imagen6.jpeg",
         category: "Cargadores",
         variant: [],
-        color: "Blanco"
+        color: "Blanco",
+        stock: 12,
     },
     {
         id: 7,
@@ -67,7 +73,8 @@ export const products = [
         image: "/Imagen7.jpeg",
         category: "MagSafe",
         variant: "",
-        color: "Blanco"
+        color: "Blanco",
+        stock: 11,
     },
     {
         id: 8,
@@ -77,7 +84,8 @@ export const products = [
         image: "/Imagen8.jpeg",
         category: "MagSafe",
         variant: [],
-        color: "Blanco"
+        color: "Blanco",
+        stock: 0,
     },
     {
         id: 9,
@@ -87,7 +95,8 @@ export const products = [
         image: "/Imagen9y10.jpeg",
         category: "Audio",
         variant: [],
-        color: "Blanco"
+        color: "Blanco",
+        stock: 10,
     },
     {
         id: 10,
@@ -97,7 +106,8 @@ export const products = [
         image: "/Imagen9y10.jpeg",
         category: "Audio",
         variant: "[]",
-        color: "Blanco"
+        color: "Blanco",
+        stock: 9,
     },
     {
         id: 11,
@@ -107,7 +117,8 @@ export const products = [
         image: "/Imagen11.jpeg",
         category: "Audio",
         variant: [],
-        color: "Blanco"
+        color: "Blanco",
+        stock: 17,
     },
     {
         id: 12,
@@ -117,7 +128,8 @@ export const products = [
         image: "/Imagen12.jpeg",
         category: "Protección",
         variant: "Iphone 14",
-        color: "Transparente"
+        color: "Transparente",
+        stock: 10,
     },
     {
         id: 13,
@@ -127,7 +139,8 @@ export const products = [
         image: "/Imagen12.5.jpeg",
         category: "Protección",
         variant: "Iphone 14 pro",
-        color: "Transparente"
+        color: "Transparente",
+        stock: 0,
     },
     {
         id: 14,
@@ -137,7 +150,8 @@ export const products = [
         image: "/Imagen13.jpeg",
         category: "Protección",
         variant: "Iphone 15 pro",
-        color: "Negro"
+        color: "Negro",
+        stock: 10,
     },
     {
         id: 15,
@@ -147,7 +161,8 @@ export const products = [
         image: "/Imagen14.jpeg",
         category: "MagSafe",
         variant: "",
-        color: "Negro"
+        color: "Negro",
+        stock: 7,
     },
     {
         id: 16,
@@ -157,6 +172,7 @@ export const products = [
         image: "/Imagen15.jpeg",
         category: "MagSafe",
         variant: "",
-        color: "Negro"
+        color: "Negro",
+        stock: 0,
     },
 ];

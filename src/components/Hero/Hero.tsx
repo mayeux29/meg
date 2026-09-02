@@ -37,7 +37,7 @@ function Hero() {
                         </Link>
 
                         <Link
-                            to="/categories"
+                            to="/categorias"
                             className="inline-flex items-center justify-center rounded-full border border-neutral-300 px-7 py-3.5 text-sm font-semibold text-neutral-800 transition hover:-translate-y-0.5 hover:border-neutral-950 hover:bg-neutral-50"
                         >
                             Explorar categorías
@@ -107,12 +107,12 @@ function Hero() {
                                 Fundas, cargadores, auriculares y más.
                             </p>
 
-                            <a
-                                href="/productos"
+                            <Link
+                                to="/productos"
                                 className="mt-5 inline-flex items-center rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-neutral-900 transition hover:bg-neutral-200"
                             >
                                 Ver productos
-                            </a>
+                            </Link>
                         </div>
 
                     </div>
